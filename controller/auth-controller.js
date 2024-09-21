@@ -66,7 +66,6 @@ module.exports.loginUser = async (req, res) => {
             // Secure cookie settings for production
             res.cookie("token", token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === "production", // Set secure only for production
                 sameSite: "Strict"
             });
 
