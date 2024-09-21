@@ -127,7 +127,7 @@
         <div class="product-card">
             <img src="data:<%= product.image.mimetype %>;base64,<%= product.image.toString('base64') %>" alt="Product Image">
             <p><%= product.name %></p>
-            <p><strike>$<%= product.price %></strike> $<%= product.price - product.discount %></p>
+            <p><span style="text-decoration: line-through;">$<%= product.price %></span>$<%= product.price - product.discount %></p>
             <a href="/addtocart/<%= product._id %>">ADD TO CART</a>
         </div>
         <% }) %>
